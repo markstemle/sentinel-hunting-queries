@@ -1,0 +1,5 @@
+AzureActivity
+| where OperationNameValue has "write" or OperationNameValue has "delete" or OperationNameValue has "action"
+| where ActivityStatusValue == "Succeeded"
+| project TimeGenerated, OperationNameValue, Resource, Caller, CallerIpAddress, ActivityStatusValue, SubscriptionId, ResourceGroup
+| order by TimeGenerated desc

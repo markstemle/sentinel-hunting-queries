@@ -1,0 +1,4 @@
+AzureActivity
+| where OperationNameValue has "networkSecurityGroups" and (OperationNameValue has "write" or OperationNameValue has "delete")
+| project TimeGenerated, OperationNameValue, Resource, Caller, CallerIpAddress, ActivityStatusValue, SubscriptionId, ResourceGroup
+| order by TimeGenerated desc

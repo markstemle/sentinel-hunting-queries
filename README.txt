@@ -23,3 +23,7 @@ nsg-activity
 resource-creation-deletion
 
 group-changes
+
+vm-operations
+
+storage-operations

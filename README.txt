@@ -1,9 +1,17 @@
 The Following Queries are Contained in the Repo. More to be added.
 
--Find Firewall Denies By IP: Displays All Deny events for a specific IP
--Find Firewall Allows By IP: Displays All Allow events for a specific IP
--All Vault Logs: Returns all Vault Activity Logs
--All Read Operations: Returns all "SecretGet" Operations
--All Write Operations: Returns all "SecretSet" Operations
--All Failed Operations: Returns any Failed Key Vault Operations
--Find IP Vault Activity: Finds Vault Activity for a Given IP
+all-vault-logs
+
+find-ip-allows
+
+find-ip-denies
+
+general-admin-activity
+
+vault-failed-operations
+
+vault-operations-ip
+
+vault-read-operations
+
+vault-write-operations

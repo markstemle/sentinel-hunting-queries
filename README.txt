@@ -5,3 +5,5 @@ The Following Queries are Contained in the Repo. More to be added.
 -All Vault Logs: Returns all Vault Activity Logs
 -All Read Operations: Returns all "SecretGet" Operations
 -All Write Operations: Returns all "SecretSet" Operations
+-All Failed Operations: Returns any Failed Key Vault Operations
+-Find IP Vault Activity: Finds Vault Activity for a Given IP

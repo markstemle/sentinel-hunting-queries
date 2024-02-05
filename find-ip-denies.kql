@@ -5,4 +5,4 @@ AzureDiagnostics
 | where TimeGenerated between(startTime .. endTime) 
 | where SourceIP == machineAddress
 | where Action_s != 'Deny'
-| project TimeGenerated, SourceIP, Action_s, ActionReason_s
+| project TimeGenerated, SourceIP, Action_s, ActionReason_s, Identity //(identity is optional)

@@ -1,0 +1,5 @@
+AzureDiagnostics
+| where ResourceType == "VAULTS"
+| where Category == "AuditEvent"
+| project TimeGenerated, OperationName, CallerIPAddress, ResultType, Resource
+| order by TimeGenerated desc

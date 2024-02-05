@@ -1,4 +1,4 @@
 AzureActivity
-| where ResourceProviderValue == "MICROSOFT.COMPUTE/VIRTUALMACHINES" and (OperationNameValue has "write" or OperationNameValue has "delete")
+| where OperationNameValue has "MICROSOFT.COMPUTE/VIRTUALMACHINES" and (OperationNameValue has "write" or OperationNameValue has "delete")
 | project TimeGenerated, OperationNameValue, Resource, Caller, CallerIpAddress, ActivityStatusValue, SubscriptionId, ResourceGroup
 | order by TimeGenerated desc

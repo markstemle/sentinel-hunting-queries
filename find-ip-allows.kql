@@ -1,0 +1,8 @@
+let machineAddress = "<<>>"; // Specify the IP address you're interested in
+let startTime = ago(7d); // Specify the start of the time window, e.g., 7 days ago
+let endTime = now();
+AzureDiagnostics
+| where TimeGenerated between(startTime .. endTime) 
+| where SourceIP == machineAddress
+| where Action_s != 'Allow'
+| project TimeGenerated, SourceIP, Action_s, ActionReason_s

@@ -1,0 +1,4 @@
+AzureActivity
+| where CategoryValue == "RoleManagement" and OperationNameValue endswith "roleAssignments/write"
+| project TimeGenerated, OperationNameValue, Resource, Caller, CallerIpAddress, ActivityStatusValue, SubscriptionId, ResourceGroup
+| order by TimeGenerated desc

@@ -1,0 +1,4 @@
+AzureActivity
+| where ResourceProviderValue in ("MICROSOFT.RESOURCES/SUBSCRIPTIONS", "MICROSOFT.MANAGEMENT/MANAGEMENTGROUPS")
+| project TimeGenerated, OperationNameValue, Resource, Caller, CallerIpAddress, ActivityStatusValue, SubscriptionId, ResourceGroup
+| order by TimeGenerated desc

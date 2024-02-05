@@ -2,5 +2,5 @@ AzureDiagnostics
 | where ResourceType == "VAULTS"
 | where Category == "AuditEvent"
 | where ResultType != "Success"
-| project TimeGenerated, OperationName, CallerIPAddress, ResultType, ResultDescription, Resource
+| project TimeGenerated, OperationName, CallerIPAddress, ResultType, ResultDescription, Resource, Identity //(identity is optional)
 | order by TimeGenerated desc

@@ -1,0 +1,4 @@
+AzureActivity
+| where OperationNameValue has "MICROSOFT.STORAGE/STORAGEACCOUNTS" and (OperationNameValue contains "write" or OperationNameValue contains "delete")
+| project TimeGenerated, OperationNameValue, Resource, Caller, CallerIpAddress, ActivityStatusValue, SubscriptionId, ResourceGroup
+| order by TimeGenerated desc

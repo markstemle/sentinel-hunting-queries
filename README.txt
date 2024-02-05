@@ -15,3 +15,11 @@ vault-operations-ip
 vault-read-operations
 
 vault-write-operations
+
+role-assignment-activity
+
+nsg-activity
+
+resource-creation-deletion
+
+group-changes
